@@ -8,7 +8,7 @@ app = Flask(__name__)
 from flask_jwt_extended import JWTManager
 import os
 
-app.config["JWT_SECRET_KEY"] = os.getenv("JWT_SECRET_KEY", "super-secret")
+app.config["JWT_SECRET_KEY"] = os.getenv("JWT_SECRET_KEY")
 jwt = JWTManager(app)
 
 # registrar blueprints
